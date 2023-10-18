@@ -32,6 +32,6 @@ export class LoanFormComponent {
       tEStudy: this.tEStudy
     };
 
-    
+    this.dataSubmitted.emit(formData);
   }
 }

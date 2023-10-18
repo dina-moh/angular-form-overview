@@ -11,8 +11,8 @@ export class AppComponent {
   formData: any = {};
   currentPage: string = 'page1';
 
-  receiveData(data: any) {
-    this.formData = data;
+  receiveData(formData: any) {
+    this.formData = formData;
   }
 
   navigateToPage2() {
