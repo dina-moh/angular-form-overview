@@ -1,7 +1,12 @@
-<div *ngIf="currentPage === 'page1'">
-    <app-loan-form (dataSubmitted)="receiveData($event)"></app-loan-form>
-    <button (click)="navigateToPage2()">Next Page</button>
-</div>
-<div *ngIf="currentPage === 'page2'">
-    <app-loan-overview [receivedData]="formData"></app-loan-overview>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<div class="col-md-6">
+    <div *ngIf="currentPage === 'page1'">
+        <app-loan-form (dataSubmitted)="receiveData($event)"></app-loan-form>
+        <button class="btn btn-success" (click)="navigateToPage2()">Next Page</button>
+    </div>
+    <div *ngIf="currentPage === 'page2'">
+        <app-loan-overview [receivedData]="formData"></app-loan-overview>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </div>
 </div>
