@@ -8,6 +8,7 @@ import { Output } from '@angular/core';
   styleUrls: ['./loan-form.component.css']
 })
 export class LoanFormComponent {
+  formData: any;
  applicantType: string = '';
  sector: string = '';
  typeOfLoan: string = '';
@@ -31,6 +32,6 @@ export class LoanFormComponent {
       tEStudy: this.tEStudy
     };
 
-    this.dataSubmitted.emit(this.formData);
+    
   }
 }
