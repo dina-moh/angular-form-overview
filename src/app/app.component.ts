@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'adf';
+
+  formData: any = {};
+  currentPage: string = 'page1';
+
+  receiveData(data: any) {
+    this.formData = data;
+  }
+
+  navigateToPage2() {
+    this.currentPage = 'page2';
+  }
+
+
 }

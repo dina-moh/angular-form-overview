@@ -1,0 +1,56 @@
+<form (submit)="onSubmit()">
+    <label for="applicantType">Applicant Type</label>
+    <select id="applicantType" [(ngModel)]="applicantType" name="applicantType">
+        <option value="individual">Individual</option>
+        <option value="facility">Facility</option>
+        <option value="association">Association</option>
+    </select>
+    <br>
+
+    <label for="sector">Sector</label>
+    <select id="sector" [(ngModel)]="sector" name="sector">
+        <option value="aquaculture">Aquaculture</option>
+        <option value="chickenCoop">Chicken Coop</option>
+        <option value="poultry">Poultry</option>
+        <option value="supplyChain">Supply Chain</option>
+        <option value="agriculturalInvestmentAbroad">Agricultural Investment Abroad</option>
+        <option value="bankPartnershipFinancing">Bank Partnership Financing</option>
+        <option value="developmental">Developmental</option>
+        <option value="other">Other</option>
+    </select>
+
+    <br>
+    <label for="typeOfLoan">Type of Loan</label>
+    <select id="typeOfLoan" [(ngModel)]="typeOfLoan" name="typeOfLoan">
+        <option value="developmentLoan">Development Loan</option>
+        <option value="coffeeProductionDevelopmentLoan">Coffee Production Development Loan</option>
+        <option value="beekeepingDevelopmentLoan">Beekeeping Development Loan</option>
+        <option value="developmentLoanForRoseCultivation">Development Loan for Rose Cultivation</option>
+        <option value="developmentLoanForRainfedCrops">Development Loan for Rainfed Crops</option>
+        <option value="mobileBeekeepingDevelopmentLoan">Beekeeping Development Loan</option>
+        <option value="developmentLoanForVeterinaryClinics">Development Loan for Veterinary Clinics</option>
+    </select>
+    <br>
+
+    <label for="estimatedCostOfCapitalCosts">Estimated Cost of Capital Costs</label>
+    <input type="number" id="estimatedCostOfCapitalCosts" name="estimatedCostOfCapitalCosts" [(ngModel)]="estimatedCostOfCapitalCosts">
+    <br>
+    <label for="estimatedCostOfOperationalCosts">Estimated Cost of Operational Costs</label>
+    <input type="number" id="estimatedCostOfOperationalCosts" name="estimatedCostOfOperationalCosts" [(ngModel)]="estimatedCostOfOperationalCosts">
+    <br>
+
+    <label for="financialSolvency">Financial Solvency (6 month bank statement)</label>
+    <input type="file" id="financialSolvency" name="financialSolvency" [(ngModel)]="financialSolvency">
+    <br>
+    <label for="landDocument">Land Documents to Inquire About a Deed</label>
+    <input type="file" id="landDocument" name="landDocument" [(ngModel)]="landDocument">
+    <br>
+    <label for="tEStudy">Technical and Economic Feasibility Study</label>
+    <input type="file" id="tEStudy" name="tEStudy" [(ngModel)]="tEStudy">
+
+
+
+    <!-- <input type="text" id="dataInput" [(ngModel)]="data" name="data" required>
+    <br> -->
+    <button type="submit">Submit</button>
+</form>
