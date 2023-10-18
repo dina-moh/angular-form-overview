@@ -20,18 +20,21 @@ export class LoanFormComponent {
 
   @Output() dataSubmitted = new EventEmitter<any>();
 
-  onSubmit() {
-    const formData = {
-      applicantType: this.applicantType,
-      sector: this.sector,
-      typeOfLoan: this.typeOfLoan,
-      estimatedCostOfCapitalCosts: this.estimatedCostOfCapitalCosts,
-      estimatedCostOfOperationalCosts: this.estimatedCostOfOperationalCosts,
-      financialSolvency: this.financialSolvency,
-      landDocument: this.landDocument,
-      tEStudy: this.tEStudy
-    };
+  formData = {
+    applicantType: this.applicantType,
+    sector: this.sector,
+    typeOfLoan: this.typeOfLoan,
+    estimatedCostOfCapitalCosts: this.estimatedCostOfCapitalCosts,
+    estimatedCostOfOperationalCosts: this.estimatedCostOfOperationalCosts,
+    financialSolvency: this.financialSolvency,
+    landDocument: this.landDocument,
+    tEStudy: this.tEStudy
+  };
 
-    this.dataSubmitted.emit(formData);
+  onSubmit() {
+   
+
+    this.dataSubmitted.emit();
   }
+
 }

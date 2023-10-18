@@ -12,10 +12,12 @@ export class AppComponent {
   currentPage: string = 'page1';
 
   receiveData(formData: any) {
+    console.log('Form data received: ' +  formData);
     this.formData = formData;
   }
 
   navigateToPage2() {
+    console.log('Navigating to P2');
     this.currentPage = 'page2';
   }
 
